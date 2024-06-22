@@ -5,7 +5,7 @@
 - go to `MMD_DCGANS_feature_training_final.ipynb` and run the notebook boxes
 - this was run on a V100 GPU with 32 Ram
 
-please feel free to email me in case of Questions @ chems.benaziza@gmail.com
+please feel free to email me in case of Questions @ chems.benaziza[ at ] gmail.com
 
 
 ## Authors
@@ -27,9 +27,9 @@ Traditional GANs use statistical divergences like KL divergence to measure distr
 
 ## Theoretical Aspects
 MMD is a metric for comparing probability distributions and belongs to the IPM family, similar to the Wasserstein metric used in WGAN. The MMD loss is defined as:
-
+$$
 \[ \text{MMD}(P, Q) = \sup_{f \in \mathcal{F}} \left( \mathbb{E}_{X \sim P}[f(X)] - \mathbb{E}_{Y \sim Q}[f(Y)] \right) \]
-
+$$
 Here, \( P \) and \( Q \) are probability distributions, and \( \mathcal{F} \) is a class of functions. The function that maximizes the difference in expectations belongs to a unit ball in a reproducing kernel Hilbert space (RKHS). MMD can also be expressed as the norm of the difference between mean embeddings of distributions \( P \) and \( Q \) in the RKHS \( \mathcal{H} \):
 
 \[ \text{MMD}(P, Q) = \|\mu_P - \mu_Q\|_{\mathcal{H}} \]
